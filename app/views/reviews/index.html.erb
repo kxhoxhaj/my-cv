@@ -1,0 +1,64 @@
+<div id="review-index" class="container">
+  <h1 class="main-header">Reviews</h1>
+  <section class="star-display">
+    <% sum = @reviews.sum(&:rating) %>
+    <% average = sum / @reviews.length.to_f %>
+    <% full_stars = average.floor %>
+    <% half_star = (average % 1) >= 0.5 %>
+    <% empty_stars = 5 - full_stars - (half_star ? 1 : 0) %>
+
+    <h2><%= average.round(1) %></h2>
+    <% full_stars.times do %>
+      <%= image_tag 'icons/star.svg', class: "svg-star" %>
+    <% end %>
+
+    <% if half_star %>
+      <%= image_tag 'icons/halfstar.svg', class: "svg-star" %>
+    <% end %>
+
+    <% empty_stars.times do %>
+      <%= image_tag 'icons/emptystar.svg', class: "svg-star" %>
+    <% end %>
+  </section>
+
+
+  <div class="review-div d-flex justify-content-center">
+    <% if @reviews.length > 0 %>
+      <ul class="reviews-list">
+        <% @reviews.each do |review|%>
+          <li class="review-card">
+            <section class="review-header">
+              <div class="user-initials">
+                <p><%= review.user.first_name[0].upcase %><%= review.user.last_name[0] %></p>
+              </div>
+              <p class="review-content">
+                <%= review.content %>
+              </p>
+            </section>
+            <p class="rating-star">
+              <% if review.rating < 5 %>
+                <% review.rating.times do %>
+                  <%= image_tag 'icons/star.svg' , class:"svg-star"%>
+                <% end %>
+                <% (5-review.rating).times do %>
+                  <%= image_tag 'icons/emptystar.svg' , class:"svg-star"%>
+                <% end %>
+              <%else%>
+                <% review.rating.times do %>
+                  <%= image_tag 'icons/star.svg' , class:"svg-star"%>
+                <% end %>
+              <% end %>
+            </p>
+          </li>
+        <% end%>
+      </ul>
+    <% else %>
+        <p class="font-size">There are no reviews yet...! Be the first to leave one. <br> 👉
+        <%= link_to "Review this website", new_review_path , class: "flash-link"%>
+        </p>
+    <%end%>
+  </div>
+  <% if user_signed_in? && !current_user.review %>
+    <%= link_to "Review this website", new_review_path , class: "flash-link"%>
+  <% end %>
+</div>

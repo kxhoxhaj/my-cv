@@ -1,15 +1,17 @@
-<div id="review" class="container">
+<div id="review-new" class="container">
   <section class="info-message col-6">
-    <p>👋 review section is for you in order to leave a review and a comment of this website for training purposes. Any advice on what to improve is welcome! Thank you in advance an 🍻 cheers!</p>
-    <p>⭐<b>Note:</b> I will note use the information you provide to hunt you down 😃, or aaaaaam I 😎... 😈 !</p>
+    <p>👋 This review section is for you in order to leave a review and a comment of this website for training purposes. Any advice on what to improve is welcome! Thank you in advance an 🍻 cheers!</p>
+    <p>⭐ <b>Note:</b> Please be kind 😈 !</p>
   </section>
   <section class="login-form col-6">
     <%= simple_form_for @review do |f| %>
       <div class="form-inputs">
         <%= f.input :content,
+                    required: true,
                     input_html: { class: "transparent" } %>
         <%= f.input :rating, collection: (1..5).to_a, label: "Rate your experience",
-                    input_html: { class: "transparent" } %>
+                    required: true,
+                    input_html: { class: "stars", data: {controller: "star-rating"} } %>
       </div>
       <div class="form-actions">
         <%= f.submit "Send your review" , class:"submit-button"%>
