@@ -4,7 +4,7 @@
     <% sum = @reviews.sum(&:rating) %>
     <% average = sum / @reviews.length.to_f %>
     <% full_stars = average.floor %>
-    <% half_star = (average % 1) >= 0.5 %>
+    <% half_star = (average % 1) >= 0.1 %>
     <% empty_stars = 5 - full_stars - (half_star ? 1 : 0) %>
 
     <h2><%= average.round(1) %></h2>
@@ -23,7 +23,7 @@
 
 
   <div class="review-div d-flex justify-content-center">
-    <% if @reviews.length > 0 %>
+    <% if @reviews.any? %>
       <ul class="reviews-list">
         <% @reviews.each do |review|%>
           <li class="review-card">

@@ -19,6 +19,7 @@
     box-shadow: $button-color 0px 5px 15px;
     border-radius: 16px;
     transition: 0.7s;
+    transform: scale(1.1);
 
     .transparent {
       border-radius: 16px;
@@ -37,8 +38,8 @@
 #sign-up {
   width: 90%;
   margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
 
   .info-message {
     color: $light-color;
@@ -46,7 +47,6 @@
     margin-top: 1rem;
     padding: 1rem;
     min-height: 400px;
-    width: 100%;
   }
   .login-form {
     border-radius: 5px;
@@ -56,14 +56,15 @@
     color: $app-color;
     background-color: $light-color;
     max-height: fit-content;
-    width: 100%;
     margin-bottom: 1rem;
   }
 
   .login-form:hover, .login-form:active {
+    margin-top: 4rem;
     box-shadow: $button-color 0px 5px 15px;
     border-radius: 16px;
     transition: 0.7s;
+    transform: scale(1.1);
 
     .transparent {
       transition: 0.7s;
@@ -135,12 +136,21 @@ width: fit-content;
     }
   }
   #sign-up {
+    display: grid;
     grid-template-columns: 1fr;
     .login-form {
+      width: 90vw;
       margin-top:0;
+      margin-bottom: 2rem;
+    }
+
+    .login-form:hover, .login-form:active {
+      margin-top:0;
+      transform: scale(1.05);
     }
   }
   .info-message {
+    width: 90vw;
     height: fit-content;
     margin-top: 0.5rem
   }

@@ -31,11 +31,14 @@
 }
 
 .review-card:hover {
+  border: 1px solid;
+  border-color: $button-color;
   background-color: $light-color;
   box-shadow: $button-color 0px 5px 15px;
   border-radius: 16px;
   padding-top: 1.5rem;
   transition: 0.7s;
+  transform: scale(1.02);
 
   .user-initials{
     min-width: 40px;

@@ -1,12 +1,33 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: $light-color;
-}
+.navbar {
+  width: 100%;
+  justify-content: end;
+  background: transparent;
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+  .nav-link {
+    font-size: 18px;
+    color: $light-color;
+  }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+  .nav-link:hover {
+    color: $button-color;
+  }
+
+  .navbar-toggler {
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0;
+    color: $light-color;
+    border-radius: 16px;
+    border: 1px solid $light-color;
+    padding: 1rem;
+    width: 55px;
+    height: 55px;
+  }
+
+  .navbar-toggler:active {
+    color: $button-color;
+    border-radius: 50%;
+    border: 1px solid $button-color;
+    padding: 1rem;
+  }
 }
