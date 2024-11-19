@@ -20,12 +20,13 @@
     background-color: $light-color;
     height: fit-content;
     margin-bottom: 1rem;
+    transition: all 0.7s ease;
   }
 
   .login-form:hover, .login-form:active {
     box-shadow: $button-color 0px 5px 15px;
     border-radius: 16px;
-    transition: 0.7s;
+    transition: all 0.7s ease;
     transform: scale(1.1);
     margin-top: 3rem;
 
@@ -33,12 +34,12 @@
       border: 2px solid;
       border-color: $button-color;
       border-radius: 16px;
-      transition: 0.7s;
+      transition: all 0.7s ease;
     }
 
     .submit-button {
       border-radius: 16px;
-      transition: 0.7s;
+      transition: 0.7s ease;
     }
   }
 
@@ -46,6 +47,7 @@
     border-radius: 5px;
     margin-top: 1rem;
     margin-bottom: 0;
+    transition: 0.7s ease;
   }
 }
 

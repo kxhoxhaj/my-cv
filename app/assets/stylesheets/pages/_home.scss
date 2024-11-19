@@ -3,18 +3,28 @@
   background-image: url(/assets/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   width: 100vw;
   height: 100vh;
+  animation: zoomBackground 10s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
   #home {
     background-image: url(/assets/background-2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     background-position: bottom;
-    width: 100vw;
-    height: 100vh;
+    animation: zoomBackground 12s ease-in-out infinite;
+  }
+}
+
+@keyframes zoomBackground {
+  0% {
+    background-size: 100%; /* Initial size */
+  }
+  50% {
+    background-size: 120%; /* Zoom in */
+  }
+  100% {
+    background-size: 100%; /* Back to original size */
   }
 }

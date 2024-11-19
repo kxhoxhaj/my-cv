@@ -89,6 +89,7 @@
   background-color: $light-color;
   border: 2px solid;
   border-color: $button-color;
+  transition: all 0.7s ease;
 }
 
 .transparent:focus {
