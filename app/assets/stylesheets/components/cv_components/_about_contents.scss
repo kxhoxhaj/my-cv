@@ -1,0 +1,10 @@
+.about-contents{
+  background-color: $light-color;
+  color: $app-color;
+  border-radius: 16px;
+  padding: 1rem;
+  h3{
+    text-decoration: underline $button-color;
+    text-underline-offset: 0.5rem;
+  }
+}

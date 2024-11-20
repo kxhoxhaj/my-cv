@@ -3,3 +3,6 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "@popperjs/core"
 import "bootstrap"
+
+import MenuCollapseController from "controllers/menu_collapse_controller";
+Stimulus.register("menu-collapse", MenuCollapseController);
