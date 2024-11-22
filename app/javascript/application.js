@@ -6,3 +6,6 @@ import "bootstrap"
 
 import MenuCollapseController from "controllers/menu_collapse_controller";
 Stimulus.register("menu-collapse", MenuCollapseController);
+
+import SwapViewController from "controllers/swap_view_controller"
+Stimuls.register("swap-view", SwapViewController);

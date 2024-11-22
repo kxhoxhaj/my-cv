@@ -1,17 +1,16 @@
 <section class="cv-banner">
   <%= render "shared/navbar" %>
-  <div id="cv-index" class="container" data-controller="menu-collapse">
+  <div id="cv-index" class="container" data-controller="menu-collapse swap-view">
     <button id="menu-icon" class="menu-icon" data-action="menu-collapse#toggleMenu">
       <i class="fa-solid fa-bars"></i>
     </button>
     <div id="menu-links" class="about-links" data-menu-collapse-target="links">
-      <a id="profile-button" class="about-button">Profile</a>
-      <a id="projects-button" class="about-button">Projects</a>
-      <a id="experience-button" class="about-button">Experience</a>
-      <a id="education-button" class="about-button">Education</a>
+      <a id="profile-button" class="about-button" data-action="swap-view#displayProfile">Profile</a>
+      <a id="experience-button" class="about-button" data-action="swap-view#displayProjects">Projects&Experience</a>
+      <a id="education-button" class="about-button" data-action="swap-view#displayEducation">Education</a>
       <a id="contact-button" class="about-button">Contact</a>
     </div>
-    <div class="about-contents" data-menu-target="contents">
+    <div id="about-profile" class="about-contents" data-menu-target="contents" data-swap-view-target="profile">
       <h3>🧔‍♂️ About me</h3>
       <section class="orange-strip">
       </section>
@@ -64,6 +63,94 @@
         <a href="https://sass-lang.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="SASS" width="50" height="50" />
         </a>
       </p>
+    </div>
+    <div id="about-projects-experience" class="about-contents d-none" data-menu-target="contents" data-swap-view-target="projects">
+      <h3>🖥️  Projects</h3>
+      <section class="orange-strip">
+      </section>
+      <p>
+        Mechanical Engineer with recent
+        training in Fullstack development,
+        accomplished through a 9-week
+        program at Le Wagon. With hands-on
+        experience gained from a project
+        focused on enhancing the workout
+        experience for sports enthusiasts, I have
+        refined my new set of skills. This
+        combination of prior experience and
+        recent achievements has enriched my
+        knowledge, enabling me to deliver
+        dynamic and efficient solutions when
+        collaborating with fellow developers. I'm
+        enthusiastic about working together to
+        create innovative and dynamic
+        solutions.
+      </p>
+      <h3>💼 Experience</h3>
+      <section class="orange-strip">
+      </section>
+      <p>
+        <b>Project Engineer, Site Supervisor, Mechanical Engineer,
+      Vali Group, Vali Engineering</b><br>
+
+      05/2019 – 09/2022 | London, England<br>
+      • Worked on Building Maintenance Projects solving cold and hot water supply
+      system problems for commercial and residential buildings allover London
+      which enhanced my problem solving skills. To mention a few of the most
+      known: "The Tower of London"
+      "The Guardian" and "BNP Paribas"
+      ,<br>
+      • Oversaw the design and drawing of mechanical systems within buildings and
+      spotted potential issues (mechanical electrical and/or plumbing) in the
+      building<br>
+      • Removed existing defective components and reinstated system with new
+      components.<br>
+      • Tested updated system by running full building test pressure, tested electrical
+      components functionality, ensured system being full operational.
+      </p>
+    </div>
+    <div id="about-education" class="about-contents d-none" data-menu-target="contents" data-swap-view-target="education">
+      <h3>📙  Education</h3>
+      <section class="orange-strip">
+      </section>
+      <p>
+        <b>Web Development, Le Wagon</b><br>
+        2023 | Berlin, Germany<br>
+        • Completed a full-time coding bootcamp.<br>
+        • Learned and applied Ruby on Rails, HTML, CSS, Bootstrap, JavaScript, SQL, Git,
+        GitHub and Heroku.<br>
+        • Designed, implemented, and launched a clone of AirBnB called Earth BNB to
+        production.<br>
+        • Pitched the idea for a web app, ShapeSync, and successfully completed the
+        project in a team of five in just two weeks.
+        <b>Introduction to Back-End Development, Coursera</b><br>
+        2023 | Berlin, Germany<br>
+        • Create and styled a webpage with HTML and CSS.<br>
+        • Learned the benefits of working with UI frameworks.<br>
+        <b>Polytechnic University of Tirana</b><br>
+        2013 – 2017 | Tirana, Albania<br>
+        • Bachelor of Hydrotechnical Engineering.
+      </p>
+      <h3>💼 Languages</h3>
+      <section class="orange-strip">
+      </section>
+      <ul id="languages">
+        <li>
+          🏴󠁧󠁢󠁥󠁮󠁧󠁿 ⭐⭐⭐⭐
+        </li>
+        <li>
+          🇮🇹 ⭐⭐⭐⭐
+        </li>
+        <li>
+          🇦🇱 ⭐⭐⭐⭐⭐
+        </li>
+        <li>
+          🇹🇷 ⭐⭐⭐
+        </li>
+        <li>
+          🇩🇪 ⭐
+        </li>
+      </ul>
     </div>
   </div>
 </section>

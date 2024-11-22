@@ -1,17 +1,92 @@
-.about-contents{
+.about-contents {
+  display: flex;
+  flex-direction: column;
   background-color: $light-color;
   color: $app-color;
   border-radius: 16px;
   padding: 1rem;
+  margin-bottom: 1rem;
+  animation: addBorder 2s linear forwards;
 
-  .orange-strip{
+  .orange-strip {
+    border-radius: 5px;
     width: 100%;
-    height: 3px;
-    background-image: linear-gradient(to right, $button-color , $light-color);
+    height: 10px;
     margin-bottom: 5px;
+    background-size: 200%;
+    background-image: linear-gradient(to right, $light-color, $button-color, $light-color);
+    animation: shiftColor 1s linear 1 forwards;
   }
 
   img {
     margin-top: 5px;
+    animation: increaseImgSize 1s linear 1 forwards;
+  }
+
+  h3 {
+    animation: shiftHeader 1s linear 1 forwards, increaseTextSize 1s linear 1 forwards;
+  }
+
+  p {
+    animation: slideIn 1s linear 1 forwards;
+  }
+
+}
+
+@keyframes slideIn {
+  from {
+    translate: 150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+
+@keyframes shiftHeader {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes increaseTextSize {
+  0% {
+    font-size: 10px;
+  }
+  100% {
+    font-size: 30px;
+  }
+}
+
+@keyframes increaseImgSize {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shiftColor {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+@keyframes addBorder {
+  0% {
+    box-shadow:  0 2px 8px 10px rgba($button-color, 0.1);
+  }
+  100% {
+    box-shadow:  0 0 0 0px $button-color;
   }
 }
