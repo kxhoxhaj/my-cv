@@ -14,6 +14,13 @@
     font-size: 18px;
     margin-top: 1rem;
   }
+
+  .contact-text{
+    margin-top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease, visibility 1s ease;
+  }
 }
 
 .profile-picture {
@@ -82,9 +89,24 @@
     }
   }
 
+  .contact-text{
+    margin-top: 0;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s ease, visibility 1s ease;
+  }
+
 }
 
 @media (max-width: 768px) {
+  #profile {
+    .contact-text{
+      margin-top: 0;
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 1s ease, visibility 1s ease;
+    }
+  }
   .social-links{
     justify-content: space-around;
     visibility: visible;

@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ["profile", "projects", "education", "profileLink", "projectsLink", "educationLink"];
+  static targets = ["profile", "projects", "education", "contact", "profileLink", "projectsLink", "educationLink", "contactLink"];
 
   displayProfile() {
     this.clearActiveClasses()
