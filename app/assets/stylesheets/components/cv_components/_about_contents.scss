@@ -33,6 +33,12 @@
 
 }
 
+@media (max-width: 768px) {
+  .about-contents{
+    margin-bottom: 0;
+  }
+}
+
 
 @keyframes changeHeight {
   0% {

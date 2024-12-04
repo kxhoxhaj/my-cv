@@ -4,17 +4,21 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  width: 100vw;
-  height: 100vh;
+  background-attachment: fixed;
+  min-height: 100vh;
+  height: 100%;
   animation: zoomBackground 8s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
   #home {
     background-image: url(/assets/background-2.jpg);
-    background-size: cover;
+    background-size: 130%;
     background-position: bottom;
-    animation: zoomBackground 12s ease-in-out infinite;
+    background-attachment: fixed;
+    min-height: 100vh;
+    height: 100%;
+    animation: zoomBackground2 12s ease-in-out 1;
   }
 }
 

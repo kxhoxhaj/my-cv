@@ -2,15 +2,19 @@
   background-image: url(/assets/review.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   background-position: bottom;
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
+  padding-bottom: 2rem;
   animation: shiftBottomBackground 12s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
   .review-banner {
     background-position: right;
+    background-attachment: fixed;
+    padding-bottom: 1.5rem;
     animation: shiftSideBackground 15s ease-in-out infinite;
   }
 }

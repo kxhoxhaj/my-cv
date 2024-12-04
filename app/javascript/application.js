@@ -9,3 +9,6 @@ Stimulus.register("menu-collapse", MenuCollapseController);
 
 import SwapViewController from "controllers/swap_view_controller"
 Stimulus.register("swap-view", SwapViewController);
+
+import ToggleActiveClassController from "controllers/toggle_active_class_controller"
+Stimulus.register("toggle-active-class", ToggleActiveClassController);

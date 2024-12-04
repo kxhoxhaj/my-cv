@@ -9,7 +9,6 @@ export default class extends Controller {
     this.projectsTarget.classList.add("d-none")
     this.educationTarget.classList.add("d-none")
     this.profileLinkTarget.classList.add("active")
-    console.log("Active class added to:", this.profileLinkTarget);
   }
 
   displayProjects() {
