@@ -10,4 +10,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name])
   end
 
+  def not_found
+    raise ActionController::RoutingError.new("Page not found")
+  end
 end

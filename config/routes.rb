@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get "cv", to: "pages#cv"
   # Defines the root path route ("/")
   # root "articles#index"
+  get "/test-404", to: "application#not_found"
 end

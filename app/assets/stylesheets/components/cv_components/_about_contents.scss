@@ -33,6 +33,14 @@
 
 }
 
+#about-projects-experience {
+  .social-link {
+    font-size: 30px;
+    text-decoration: none;
+    color: $button-color;
+  }
+}
+
 @media (max-width: 768px) {
   .about-contents{
     margin-bottom: 0;
