@@ -1,6 +1,9 @@
 <section class="review-banner">
   <%= render "shared/navbar" %>
   <div id="review-index" class="container">
+    <% if user_signed_in? && !current_user.review %>
+      <%= link_to "Review this website", new_review_path , class: "flash-link", id: "new-review"%>
+    <% end %>
     <h1 class="main-header">Reviews</h1>
     <section class="star-display">
       <% sum = @reviews.sum(&:rating) %>
@@ -22,7 +25,6 @@
         <%= image_tag 'icons/emptystar.svg', class: "svg-star" %>
       <% end %>
     </section>
-
 
     <div class="review-div d-flex justify-content-center">
       <% if @reviews.any? %>
@@ -60,8 +62,5 @@
           </p>
       <%end%>
     </div>
-    <% if user_signed_in? && !current_user.review %>
-      <%= link_to "Review this website", new_review_path , class: "flash-link"%>
-    <% end %>
   </div>
 </section>

@@ -65,6 +65,26 @@
   padding: 1rem;
 }
 
+#new-review {
+  font-size: 36px;
+  text-shadow: 1px 1px 8px $app-color;
+}
+
+.existing-review {
+  margin: auto;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  font-size: 24px;
+  color: $light-color;
+
+  .submit-button{
+    width: fit-content;
+  }
+}
+
 @media (max-width: 768px) {
   #review-new {
     display: grid;
