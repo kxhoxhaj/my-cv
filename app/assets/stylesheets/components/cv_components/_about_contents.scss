@@ -34,10 +34,20 @@
 }
 
 #about-projects-experience {
+  .bold-text {
+    font-size: 20px;
+  }
+
   .social-link {
     font-size: 30px;
     text-decoration: none;
     color: $button-color;
+  }
+}
+
+#about-education {
+  .bold-text {
+    font-size: 20px;
   }
 }
 

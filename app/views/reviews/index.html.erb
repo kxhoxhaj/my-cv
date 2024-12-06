@@ -2,32 +2,32 @@
   <%= render "shared/navbar" %>
   <div id="review-index" class="container">
     <% if user_signed_in? && !current_user.review %>
-      <%= link_to "Review this website", new_review_path , class: "flash-link", id: "new-review"%>
+      <%= link_to "👉 Review this website", new_review_path , class: "flash-link", id: "new-review"%>
     <% end %>
     <h1 class="main-header">Reviews</h1>
-    <section class="star-display">
-      <% sum = @reviews.sum(&:rating) %>
-      <% average = sum / @reviews.length.to_f %>
-      <% full_stars = average.floor %>
-      <% half_star = (average % 1) >= 0.1 %>
-      <% empty_stars = 5 - full_stars - (half_star ? 1 : 0) %>
+    <% if @reviews.any? %>
+      <section class="star-display">
+        <% sum = @reviews.sum(&:rating) %>
+        <% average = sum / @reviews.length.to_f %>
+        <% full_stars = average.floor %>
+        <% half_star = (average % 1) >= 0.1 %>
+        <% empty_stars = 5 - full_stars - (half_star ? 1 : 0) %>
 
-      <h2><%= average.round(1) %></h2>
-      <% full_stars.times do %>
-        <%= image_tag 'icons/star.svg', class: "svg-star" %>
-      <% end %>
+        <h2><%= average.round(1) %></h2>
+        <% full_stars.times do %>
+          <%= image_tag 'icons/star.svg', class: "svg-star" %>
+        <% end %>
 
-      <% if half_star %>
-        <%= image_tag 'icons/halfstar.svg', class: "svg-star" %>
-      <% end %>
+        <% if half_star %>
+          <%= image_tag 'icons/halfstar.svg', class: "svg-star" %>
+        <% end %>
 
-      <% empty_stars.times do %>
-        <%= image_tag 'icons/emptystar.svg', class: "svg-star" %>
-      <% end %>
-    </section>
+        <% empty_stars.times do %>
+          <%= image_tag 'icons/emptystar.svg', class: "svg-star" %>
+        <% end %>
+      </section>
 
-    <div class="review-div d-flex justify-content-center">
-      <% if @reviews.any? %>
+      <div class="review-div d-flex justify-content-center">
         <ul class="reviews-list">
           <% @reviews.each do |review|%>
             <li class="review-card">
@@ -57,8 +57,8 @@
           <% end%>
         </ul>
       <% else %>
-          <p class="font-size">There are no reviews yet...! Be the first to leave one. <br> 👉
-          <%= link_to "Review this website", new_review_path , class: "flash-link"%>
+          <p class="font-size">
+            There are no reviews yet...! Be the first to leave one.
           </p>
       <%end%>
     </div>
