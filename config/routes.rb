@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   root to: "pages#home"
   resources :reviews, only: [:index, :new, :create]
@@ -6,5 +7,4 @@ Rails.application.routes.draw do
   get "cv", to: "pages#cv"
   # Defines the root path route ("/")
   # root "articles#index"
-  get "/test-404", to: "application#not_found"
 end

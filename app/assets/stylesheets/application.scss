@@ -4,8 +4,11 @@
 @import "config/bootstrap_variables";
 
 // External libraries
-@import "bootstrap";
-@import "font-awesome";
+@import "bootstrap/scss/bootstrap";
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/brands";
+@import "@fortawesome/fontawesome-free/scss/regular";
 
 // Your CSS partials
 @import "components/index";
