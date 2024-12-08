@@ -1,5 +1,7 @@
 class ReviewsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index ]
+  before_action :authenticate_user_or_redirect!, only: [:new, :create]
+
   def index
     @reviews = Review.order(created_at: :desc)
   end
@@ -19,6 +21,12 @@ class ReviewsController < ApplicationController
   end
 
   private
+
+  def authenticate_user_or_redirect!
+    unless user_signed_in?
+      redirect_to new_user_registration_path, alert: "Please sign up to leave a review."
+    end
+  end
 
   def review_params
     params.require(:review).permit(:content, :rating)

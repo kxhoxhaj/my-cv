@@ -60,6 +60,9 @@
           <p class="font-size">
             There are no reviews yet...! Be the first to leave one.
           </p>
+          <% if !user_signed_in?%>
+            <%= link_to "👉 Review this website", new_user_registration_path , class: "flash-link", id: "new-review"%>
+          <% end %>
       <%end%>
     </div>
   </div>

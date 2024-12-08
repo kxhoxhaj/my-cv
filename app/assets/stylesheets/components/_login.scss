@@ -1,8 +1,17 @@
 .authentication {
+  background-image: url(/assets/signup-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  min-height: 100vh;
+  height: 100%;
+  padding-bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  animation: zoomBackground 12s ease-in-out infinite;
 
   .login-form {
     border-radius: 5px;
@@ -36,10 +45,19 @@
 }
 
 #sign-up {
-  width: 90%;
+  background-image: url(/assets/signup-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  min-height: 100vh;
+  height: 100%;
+  padding: 3rem;
+  width: 100%;
   margin: auto;
   display: flex;
   justify-content: space-between;
+  animation: zoomBackground 12s ease-in-out infinite;
 
   .info-message {
     color: $light-color;
@@ -60,11 +78,11 @@
   }
 
   .login-form:hover, .login-form:active {
-    margin-top: 4rem;
+    margin-top: 3rem;
     box-shadow: $button-color 0px 5px 15px;
     border-radius: 16px;
     transition: 0.7s;
-    transform: scale(1.1);
+    transform: scale(1.03);
 
     .transparent {
       transition: 0.7s;
@@ -130,6 +148,7 @@ width: fit-content;
 
 @media (max-width: 768px) {
   .authentication {
+    animation: none;
     width: 100%;
     .login-form {
       margin-top:0;
@@ -137,10 +156,13 @@ width: fit-content;
     }
   }
   #sign-up {
+    padding: 1rem;
+    background-position: top;
+    animation: shiftBottomBackground 15s ease-in-out infinite;
     display: grid;
     grid-template-columns: 1fr;
     .login-form {
-      width: 90vw;
+      width: 100%;
       margin-top:0;
       margin-bottom: 2rem;
     }
@@ -149,11 +171,11 @@ width: fit-content;
       margin-top:0;
       transform: scale(1.05);
     }
-  }
-  .info-message {
-    width: 90vw;
-    height: fit-content;
-    margin-top: 0.5rem
+    .info-message {
+      margin-top: 0;
+      width: 100%;
+      height: fit-content;
+    }
   }
 
   .submit-button{
