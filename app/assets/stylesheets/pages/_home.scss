@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 #home {
-  background-image: url(/assets/background-3.jpg);
+  background-image: asset-url("background-3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -12,7 +12,7 @@
 
 @media (max-width: 768px) {
   #home {
-    background-image: url(/assets/background-3.jpg);
+    background-image: asset-url("background-3.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: left;

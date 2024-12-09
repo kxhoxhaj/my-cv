@@ -29,7 +29,7 @@
   height: 200px;
   border: 1px solid $light-color;
   border-radius: 50%;
-  background-image: url(/assets/profile.jpg);
+  background-image: asset-url("profile.jpg");
   background-repeat: no-repeat;
   background-size: 110%;
   background-position: top center;

@@ -3,7 +3,7 @@
 @import "about_languages";
 
 .cv-banner{
-  background-image: url(/assets/cv-3.jpg);
+  background-image: asset-url("cv-3.jpg");
   background-repeat: no-repeat;
   background-size: 130%;
   background-position: center;
@@ -16,7 +16,7 @@
 
 @media (max-width: 768px) {
   .cv-banner{
-    background-image: url(/assets/cv-3.jpg);
+    background-image: asset-url("cv-3.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
