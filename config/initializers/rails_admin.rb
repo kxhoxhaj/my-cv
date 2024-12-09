@@ -1,23 +1,19 @@
 RailsAdmin.config do |config|
+  # Use importmap as the asset source
   config.asset_source = :importmap
-  
-  RailsAdmin.config do |config|
-    config.authenticate_with do
-      warden.authenticate!(scope: :user)
-    end
-    config.current_user_method(&:current_user)
-    config.authorize_with do
-      redirect_to main_app.root_path unless current_user&.admin?
-    end
+
+  # Authentication with Devise
+  config.authenticate_with do
+    warden.authenticate!(scope: :user)
+  end
+  config.current_user_method(&:current_user)
+
+  # Authorization: Only allow admins to access RailsAdmin
+  config.authorize_with do
+    redirect_to main_app.root_path unless current_user&.admin?
   end
 
-  ### Popular gems integration
-
-  ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
-  # config.current_user_method(&:current_user)
+  ### Popular gems integration (Optional configurations, uncomment if needed)
 
   ## == CancanCan ==
   # config.authorize_with :cancancan
@@ -26,14 +22,12 @@ RailsAdmin.config do |config|
   # config.authorize_with :pundit
 
   ## == PaperTrail ==
-  # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
+  # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # Uncomment if using PaperTrail
 
-  ### More at https://github.com/railsadminteam/rails_admin/wiki/Base-configuration
+  ### Gravatar integration in the Navigation Bar
+  # config.show_gravatar = true # Uncomment if you want Gravatar
 
-  ## == Gravatar integration ==
-  ## To disable Gravatar integration in Navigation Bar set to false
-  # config.show_gravatar = true
-
+  ### RailsAdmin Actions
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
@@ -45,7 +39,7 @@ RailsAdmin.config do |config|
     delete
     show_in_app
 
-    ## With an audit adapter, you can add:
+    ## Uncomment these if using an audit adapter:
     # history_index
     # history_show
   end
