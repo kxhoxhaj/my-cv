@@ -1,0 +1,23 @@
+<div id="home">
+  <%= render "shared/navbar" %>
+  <section id="profile">
+    <h1>Klevion Xhoxhaj</h1>
+    <div class="profile-picture"></div>
+    <p>Full-Stack Web Developer</p>
+    <p class="contact-text">Contact me:</p>
+    <section class="social-links">
+      <%= link_to("mailto:klevionxhoxhaj@gmail.com", class: "social-link") do %>
+        <i class="fa-solid fa-envelope"></i>
+      <% end %>
+      <%= link_to("https://www.instagram.com/klevion_xhoxhaj/", class:"social-link",  target: "_blank") do %>
+        <i class="fa-brands fa-instagram"></i>
+      <% end %>
+      <%= link_to("https://github.com/kxhoxhaj", class:"social-link",  target: "_blank") do %>
+        <i class="fa-brands fa-github"></i>
+      <% end %>
+      <%= link_to("https://www.linkedin.com/in/k-xh/", class:"social-link",  target: "_blank") do %>
+        <i class="fa-brands fa-linkedin-in"></i>
+      <% end %>
+    </section>
+  </section>
+</div>

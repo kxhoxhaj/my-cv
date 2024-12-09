@@ -1,0 +1,185 @@
+.authentication {
+  background-image: url(/assets/signup-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  min-height: 100vh;
+  height: 100%;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: zoomBackground 12s ease-in-out infinite;
+
+  .login-form {
+    border-radius: 5px;
+    margin-top: 2rem;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: $app-color;
+    background-color: $light-color;
+    max-height: fit-content;
+    width: 50%;
+  }
+
+  .login-form:hover, .login-form:active {
+    box-shadow: $button-color 0px 5px 15px;
+    border-radius: 16px;
+    transition: 0.7s;
+    transform: scale(1.1);
+
+    .transparent {
+      border-radius: 16px;
+      border: 2px solid;
+      border-color: $button-color;
+      transition: 0.7s;
+    }
+
+    .submit-button {
+      border-radius: 16px;
+      transition: 0.7s;
+    }
+  }
+}
+
+#sign-up {
+  background-image: url(/assets/signup-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  min-height: 100vh;
+  height: 100%;
+  padding: 3rem;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  animation: zoomBackground 12s ease-in-out infinite;
+
+  .info-message {
+    color: $light-color;
+    font-size: 24px;
+    margin-top: 1rem;
+    padding: 1rem;
+    min-height: 400px;
+  }
+  .login-form {
+    border-radius: 5px;
+    margin-top: 2rem;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: $app-color;
+    background-color: $light-color;
+    max-height: fit-content;
+    margin-bottom: 1rem;
+  }
+
+  .login-form:hover, .login-form:active {
+    margin-top: 3rem;
+    box-shadow: $button-color 0px 5px 15px;
+    border-radius: 16px;
+    transition: 0.7s;
+    transform: scale(1.03);
+
+    .transparent {
+      transition: 0.7s;
+      border-radius: 16px;
+    }
+
+    .submit-button {
+      border-radius: 16px;
+      transition: 0.7s;
+    }
+  }
+}
+
+.form-inputs {
+  ::placeholder {
+    color: $light-color;
+  }
+}
+
+.transparent{
+  border-radius: 5px;
+  background-color: $light-color;
+  border: 2px solid;
+  border-color: $button-color;
+  transition: all 0.7s ease;
+}
+
+.transparent:focus {
+  color:$light-color
+}
+
+.submit-button{
+  align-items: center;
+  background-image: linear-gradient(144deg, $button-color, $button-color 50%, $button-color);
+  border: 0;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  justify-content: center;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 5px;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  $light-color-space: nowrap;
+  cursor: pointer;
+}
+
+h2 {
+color: $app-color;
+}
+.links {
+text-decoration: none;
+color: $app-color;
+width: fit-content;
+}
+
+@media (max-width: 768px) {
+  .authentication {
+    animation: none;
+    width: 100%;
+    .login-form {
+      margin-top:0;
+      width: 90%;
+    }
+  }
+  #sign-up {
+    padding: 1rem;
+    background-position: top;
+    animation: shiftBottomBackground 15s ease-in-out infinite;
+    display: grid;
+    grid-template-columns: 1fr;
+    .login-form {
+      width: 100%;
+      margin-top:0;
+      margin-bottom: 2rem;
+    }
+
+    .login-form:hover, .login-form:active {
+      margin-top:0;
+      transform: scale(1.05);
+    }
+    .info-message {
+      margin-top: 0;
+      width: 100%;
+      height: fit-content;
+    }
+  }
+
+  .submit-button{
+    border-radius: 5px;
+  }
+
+}

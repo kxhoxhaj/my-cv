@@ -1,0 +1,250 @@
+<section class="cv-banner">
+  <%= render "shared/navbar" %>
+  <div id="cv-index" class="container" data-controller="menu-collapse swap-view">
+    <button id="menu-icon" class="menu-icon" data-action="menu-collapse#toggleMenu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div id="menu-links" class="about-links" data-menu-collapse-target="links">
+      <a id="profile-button" class="about-button active" data-action="swap-view#displayProfile" data-swap-view-target="profileLink">Profile</a>
+      <a id="experience-button" class="about-button" data-action="swap-view#displayProjects" data-swap-view-target="projectsLink">Projects&Experience</a>
+      <a id="education-button" class="about-button" data-action="swap-view#displayEducation" data-swap-view-target="educationLink">Education</a>
+    </div>
+    <div id="about-profile" class="about-contents" data-menu-target="contents" data-swap-view-target="profile">
+      <h3>🧔🏻‍♂️ About me</h3>
+      <section class="orange-strip">
+      </section>
+      <p>
+        Fullstack Developer with a passion for creating innovative, user-focused solutions. I completed an intensive 9-week Fullstack Development program at Le Wagon in September 2023, where I gained hands-on experience building a project aimed at enhancing the workout experience for sports enthusiasts. This training provided me with a strong foundation in development, alongside a collaborative and problem-solving mindset. I am eager to contribute to dynamic teams, leveraging my skills to design and deliver impactful solutions that improve user experiences and drive innovation.
+      </p>
+      <h3>🥷 Skills</h3>
+      <section class="orange-strip">
+      </section>
+      <p>
+        <a href="https://rubyonrails.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg" alt="rails" width="50" height="50"/>
+        </a>
+        <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="50" height="50"/>
+        </a>
+        <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="50" height="50"/>
+        </a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="50" height="50"/>
+        </a>
+        <a href="https://www.ruby-lang.org/en/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg" alt="ruby" width="50" height="50"/>
+        </a>
+        <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="50" height="50"/>
+        </a>
+        <a href="https://react.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" width="50" height="50" />
+        </a>
+        <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" width="50" height="50" />
+        </a>
+        <a href="https://sass-lang.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="SASS" width="50" height="50" />
+        </a>
+      </p>
+      <h3>🛠️ Tools</h3>
+      <section class="orange-strip">
+      </section>
+      <p>
+        <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="50" height="50"/>
+        </a>
+        <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="50" height="50"/>
+        </a>
+        <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="50" height="50"/>
+        </a>
+        <a href="https://heroku.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg" alt="heroku" width="50" height="50"/>
+        </a>
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" alt="VS Code" width="50" height="50" />
+        </a>
+      </p>
+    </div>
+    <div id="about-projects-experience" class="about-contents d-none" data-menu-target="contents" data-swap-view-target="projects">
+      <h3>🖥️  Projects</h3>
+      <section class="orange-strip mb-0">
+      </section>
+      <p>
+        <b class="bold-text">
+        React Shopping List  <%= link_to("https://kxhoxhaj.github.io/shopping-list/", class: "social-link") do %>
+        <i class="fa-solid fa-globe"></i>
+      <% end %>
+        </b><br>
+        In case you need to do your shopping today feel free to use this simple digital list to simplify your shopping. "By the way is free, you are welcome 🤪"
+        <br>
+        Key Features:
+        <br> • User-Friendly Interface
+        <br> • CRUD Functionality (You can Add, Check and Delete a item from your shopping list)
+        <br> • Search Feature (In case your list gets too long)
+        <br>
+        <b class="bold-text">
+        PiperoCare Medical Center  <%= link_to("https://www.piperocare.org/", class: "social-link") do %>
+        <i class="fa-solid fa-globe"></i>
+      <% end %>
+        </b><br>
+        Developed a user-friendly website for PiperCare Medical Center, enhancing its
+        online visibility and streamlining internal processes. The site features a
+        comprehensive service catalog, CRUD functionality for efficient service
+        management, and a prospective appointment booking system to improve client
+        accessibility.
+        <br>
+        Key Features:
+        <br> • User-Friendly Interface
+        <br> • Service Catalog
+        <br> • CRUD Functionality
+        <br> • Admin Feature
+        <br> • Prospective Appointment Booking (Planned)
+        <br>
+        <b class="bold-text">
+        Harry Potter Cluedo Helper <%= link_to("https://kxhoxhaj.github.io/cluedo-helper/", class: "social-link") do %>
+        <i class="fa-solid fa-globe"></i>
+      <% end %>
+        </b><br>
+        Designed and implemented a personalized web application to streamline the
+        Cluedo board game experience. The project addressed the inconvenience of
+        running out of helping papers by providing a digital platform for note-taking
+        during gameplay. The web app is tailored for the Harry Potter Cluedo version and
+        offers a user-friendly interface for a more enjoyable gaming session with friends.
+        Built with HTML, SASS, and Bootstrap.
+        <br>
+        <b class="bold-text">
+        Shape Sync
+        </b><br>
+        Collaborated in a team of five to develop a dynamic web application aimed at
+        assisting gym members in tracking their workouts and achieving fitness goals.
+        Utilized Ruby on Rails, integrated APIs, and implemented Pundit for enhanced
+        authorization. The project's future roadmap includes integrating AI capabilities to
+        generate personalized workout programs based on individual user goals,
+        enhancing the overall fitness experience.
+        <br>
+        <b class="bold-text">
+        Earth BNB
+        </b><br>
+        Contributed to a team of five in the development of a website facilitating the
+        rental of private islands or enabling island owners to list their properties for rent.
+        Implemented Ruby on Rails for robust backend functionality, leveraged Geocoder
+        for geospatial data, and integrated Mapbox for interactive mapping features. The
+        collaborative effort aimed to create a user-friendly platform connecting island
+        enthusiasts with unique rental opportunities.
+      </p>
+      <h3>💼 Experience</h3>
+      <section class="orange-strip">
+      </section>
+      <p>
+      <b class="bold-text">Junior Web Developer, Eder Studio</b>
+      <br>
+      02/2024 – 09/2024 | Tirana, Albania<br>
+      • Contributed to the development of web applications, enhancing user experience and functionality for small businesses at Eder Studio.
+      <br>
+      • Assisted in the design and implementation of websites, ensuring responsive design and cross-browser compatibility.
+      <br>
+      • Collaborated with a team of developers to troubleshoot and resolve issues, improving overall project efficiency.
+      <br>
+      • Participated in client meetings to gather requirements and provide updates on project progress, fostering strong client relationships.
+      <br>
+      • Conducted testing and debugging of web applications, ensuring high-quality deliverables before launch.
+      <br>
+        <b class="bold-text">Project Engineer, Site Supervisor, Mechanical Engineer,
+      Vali Group, Vali Engineering</b>
+      <br>
+
+      05/2019 – 09/2022 | London, England<br>
+      • Worked on Building Maintenance Projects solving cold and hot water supply
+      system problems for commercial and residential buildings allover London
+      which enhanced my problem solving skills. To mention a few of the most
+      known: "The Tower of London"
+      "The Guardian" and "BNP Paribas"
+      ,<br>
+      • Oversaw the design and drawing of mechanical systems within buildings and
+      spotted potential issues (mechanical electrical and/or plumbing) in the
+      building<br>
+      • Removed existing defective components and reinstated system with new
+      components.<br>
+      • Tested updated system by running full building test pressure, tested electrical
+      components functionality, ensured system being full operational.
+      </p>
+    </div>
+    <div id="about-education" class="about-contents d-none" data-menu-target="contents" data-swap-view-target="education">
+      <h3>📙  Education</h3>
+      <section class="orange-strip">
+      </section>
+      <p>
+        <b class="bold-text">Web Development, Le Wagon</b><br>
+        2023 | Berlin, Germany<br>
+        • Completed a full-time coding bootcamp.<br>
+        • Learned and applied Ruby on Rails, HTML, CSS, Bootstrap, JavaScript, SQL, Git,
+        GitHub and Heroku.<br>
+        • Designed, implemented, and launched a clone of AirBnB called Earth BNB to
+        production.<br>
+        • Pitched the idea for a web app, ShapeSync, and successfully completed the
+        project in a team of five in just two weeks.
+        <b class="bold-text">Introduction to Back-End Development, Coursera</b><br>
+        2023 | Berlin, Germany<br>
+        • Create and styled a webpage with HTML and CSS.<br>
+        • Learned the benefits of working with UI frameworks.<br>
+        <b class="bold-text">Polytechnic University of Tirana</b><br>
+        2013 – 2017 | Tirana, Albania<br>
+        • Bachelor of Hydrotechnical Engineering.
+      </p>
+      <h3>🌐 Languages</h3>
+      <section class="orange-strip">
+      </section>
+      <section id="languages">
+        <ul class="languages">
+          <li>
+            <p class="flags">
+              🇦🇱
+            </p>
+            <section class="stars">
+              <% 5.times do %>
+                <%= image_tag 'icons/star.svg', class: "svg-star" %>
+              <% end %>
+            </section class="stars">
+          </li>
+          <li>
+            <p class="flags">
+              🏴󠁧󠁢󠁥󠁮󠁧󠁿
+            </p>
+            <section class="stars">
+              <% 4.times do %>
+                <%= image_tag 'icons/star.svg', class: "svg-star" %>
+              <% end %>
+              <%= image_tag 'icons/emptystar.svg', class: "svg-star" %>
+            </section class="stars">
+          </li>
+          <li>
+            <p class="flags">
+              🇮🇹
+            </p>
+            <section class="stars">
+              <% 4.times do %>
+                <%= image_tag 'icons/star.svg', class: "svg-star" %>
+              <% end %>
+              <%= image_tag 'icons/emptystar.svg', class: "svg-star" %>
+            </section class="stars">
+          </li>
+          <li>
+            <p class="flags">
+              🇹🇷
+            </p>
+            <section class="stars">
+              <% 3.times do %>
+                <%= image_tag 'icons/star.svg', class: "svg-star" %>
+              <% end %>
+              <% 2.times do %>
+                <%= image_tag 'icons/emptystar.svg', class: "svg-star" %>
+              <% end %>
+            </section class="stars">
+          </li>
+          <li>
+            <p class="flags">
+              🇩🇪
+            </p>
+            <section class="stars">
+              <%= image_tag 'icons/star.svg', class: "svg-star" %>
+              <% 4.times do %>
+                <%= image_tag 'icons/emptystar.svg', class: "svg-star" %>
+              <% end %>
+            </section class="stars">
+          </li>
+        </ul>
+        <section class="languages-img"></section>
+      </section>
+    </div>
+  </div>
+</section>

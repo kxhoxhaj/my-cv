@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Klevion Xhoxhaj | Portfolio </title>
+    <meta name="description" content="Discover my portfolio website, crafted using Ruby on Rails, HTML, SCSS, and StimulusJS. Built to showcase my web development expertise, it features a review system where visitors can sign in, share feedback, and experience dynamic, user-friendly design.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="turbo-visit-control" content="disable">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="https://ga.jspm.io/npm:star-rating.js@4.3.0/dist/star-rating.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <%= render "shared/flashes" %>
+    <%= yield %>
+  </body>
+</html>

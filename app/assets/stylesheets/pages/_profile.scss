@@ -1,0 +1,119 @@
+#profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-shadow: 1px 1px 8px $light-color;
+  color: $light-color;
+  transition: 1s;
+  h1 {
+    margin-top: 1rem;
+  }
+
+  p {
+    font-size: 18px;
+    margin-top: 1rem;
+  }
+
+  .contact-text{
+    margin-top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease, visibility 1s ease;
+  }
+}
+
+.profile-picture {
+  margin-top: 1rem;
+  width: 200px;
+  height: 200px;
+  border: 1px solid $light-color;
+  border-radius: 50%;
+  background-image: url(/assets/profile.jpg);
+  background-repeat: no-repeat;
+  background-size: 110%;
+  background-position: top center;
+  opacity: 0.8;
+  transition: all 1s ease;
+}
+
+.social-links{
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s ease, visibility 1s ease;
+  .social-link{
+    text-decoration: none;
+    color: $button-color;
+    font-size: 10px;
+    text-shadow: none;
+    transition: font-size 1s ease;
+  }
+}
+
+#profile:hover {
+  margin-top: 1rem;
+  transition: 1s;
+  transform: scale(1.1);
+
+  .profile-picture{
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 1s ease;
+    border: 0.5px solid $button-color;
+    box-shadow:  0 0 0 2px rgba(255, 172, 74, 0.15),
+    0 0 0 4px rgba(255, 172, 74, 0.145),
+    0 0 0 6px rgba(255, 172, 74, 0.14),
+    0 0 0 8px rgba(255, 172, 74, 0.135),
+    0 0 0 10px rgba(255, 172, 74, 0.13),
+    0 0 0 13px rgba(255, 172, 74, 0.125),
+    0 0 0 16px rgba(255, 172, 74, 0.12),
+    0 0 0 19px rgba(255, 172, 74, 0.115),
+    0 0 0 22px rgba(255, 172, 74, 0.11),
+    0 0 0 25px rgba(255, 172, 74, 0.105),
+    0 0 0 28px rgba(255, 172, 74, 0.1);
+    background-size: 120%;
+    background-position: right center;
+    opacity: 0.9;
+  }
+
+  .social-links{
+    justify-content: space-around;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s ease, visibility 1s ease;
+    .social-link{
+      font-size: 35px;
+    }
+  }
+
+  .contact-text{
+    margin-top: 0;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s ease, visibility 1s ease;
+  }
+
+}
+
+@media (max-width: 768px) {
+  #profile {
+    .contact-text{
+      margin-top: 0;
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 1s ease, visibility 1s ease;
+    }
+  }
+  .social-links{
+    justify-content: space-around;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s ease, visibility 1s ease;
+    .social-link{
+      font-size: 20px;
+    }
+  }
+}

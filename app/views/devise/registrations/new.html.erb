@@ -1,0 +1,35 @@
+<div id="sign-up" >
+  <section class="info-message col-6">
+    <p>👋 This Sign Up section is for you in order to leave a review and a comment of this website for training purposes. Any advice on what to improve is welcome! Thank you in advance and 🍻 cheers!</p>
+    <p>⭐<b>Note:</b> I will not use the information you provide, to hunt you down 😃, or aaaaaam I 😎... 😈 !</p>
+  </section>
+  <section class="login-form col-6">
+    <h2>Sign Up</h2>
+
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :first_name,
+                    required: true,
+                    input_html: { autocomplete: "name", class: "transparent", placeholder: "Name" } %>
+        <%= f.input :last_name,
+                    required: true,
+                    input_html: { autocomplete: "lastname", class: "transparent", placeholder: "Lastname" } %>
+        <%= f.input :email,
+                    required: true,
+                    input_html: { autocomplete: "email", class: "transparent", placeholder: "Email"  }%>
+        <%= f.input :password,
+                    required: true,
+                    input_html: { autocomplete: "new-password", class: "transparent", placeholder: "Password"  } %>
+        <%= f.input :password_confirmation,
+                    required: true,
+                    input_html: { autocomplete: "new-password", class: "transparent", placeholder: "Confirm Password"  } %>
+      </div>
+      <div class="form-actions">
+        <%= f.button :submit, "Sign Up" , class:"submit-button"%>
+      </div>
+    <% end %>
+    <div class="d-flex justify-content-between w-100">
+      <%= render "devise/shared/links" %>
+    </div>
+  </section>
+</div>

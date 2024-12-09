@@ -1,0 +1,72 @@
+// Specific CSS for your home-page
+#home {
+  background-image: url(/assets/background-3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  height: 100%;
+  animation: zoomBackground2 12s ease-in-out 1, shiftDiagonalBackground2 12s ease-in-out 1;
+}
+
+@media (max-width: 768px) {
+  #home {
+    background-image: url(/assets/background-3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: left;
+    min-height: 100vh;
+    height: 100%;
+    width: auto;
+    animation: shiftSideBackground 15s ease-in-out infinite;
+  }
+}
+
+@keyframes zoomBackground {
+  0% {
+    background-size: 100%; /* Initial size */
+  }
+  50% {
+    background-size: 130%; /* Zoom in */
+  }
+  100% {
+    background-size: 100%; /* Back to original size */
+  }
+}
+
+@keyframes zoomBackground2 {
+  0% {
+    background-size: 100%;
+  }
+  25% {
+    background-size: 115%;
+  }
+  50% {
+    background-size: 130%;
+  }
+  75% {
+    background-size: 115%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+@keyframes shiftDiagonalBackground2 {
+  0% {
+    background-position: bottom center;
+  }
+  25% {
+    background-position: center center;
+  }
+  50% {
+    background-position: center right;
+  }
+  75% {
+    background-position: top left;
+  }
+  100% {
+    background-position: center center;
+  }
+}

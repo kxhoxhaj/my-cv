@@ -1,0 +1,59 @@
+@import "about_links";
+@import "about_contents";
+@import "about_languages";
+
+.cv-banner{
+  background-image: url(/assets/cv-3.jpg);
+  background-repeat: no-repeat;
+  background-size: 130%;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  height: 100%;
+  padding-bottom: 2rem;
+  animation: shiftDiagonalBackground 20s ease-in-out 1;
+}
+
+@media (max-width: 768px) {
+  .cv-banner{
+    background-image: url(/assets/cv-3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    height: 100%;
+    width: auto;
+    padding-bottom: 2rem;
+    animation: shiftSideBackground 15s ease-in-out infinite;
+  }
+}
+
+@keyframes shiftDiagonalBackground {
+  0% {
+    background-position: center center;
+  }
+  20% {
+    background-position: top left;
+  }
+  40% {
+    background-position: top right;
+  }
+  60% {
+    background-position: bottom left;
+  }
+  80% {
+    background-position: bottom right;
+  }
+  100% {
+    background-position: center center;
+  }
+}
+
+@keyframes zoomOutBackground {
+  0% {
+    background-size: 140%;
+  }
+  100% {
+    background-size: 110%;
+  }
+}
