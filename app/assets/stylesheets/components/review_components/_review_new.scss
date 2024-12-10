@@ -11,6 +11,7 @@
   justify-content: space-between;
 
   .info-message {
+    width: 50%;
     color: $light-color;
     font-size: 24px;
     margin-top: 1rem;
@@ -19,6 +20,7 @@
     height: fit-content;
   }
   .login-form {
+    width: 50%;
     border-radius: 5px;
     margin-top: 2rem;
     padding: 1rem;
@@ -96,8 +98,11 @@
   #review-new {
     display: grid;
     grid-template-columns: 1fr;
+    .info-message {
+      width: 100%;
+    }
     .login-form {
-      width: 90%;
+      width: 100%;
       margin-left: 1rem;
       margin-top:0;
     }
