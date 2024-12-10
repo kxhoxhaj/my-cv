@@ -35,11 +35,8 @@
   0% {
     background-position: left; /* Initial background-position */
   }
-  50% {
-    background-position: right; /* Right position */
-  }
   100% {
-    background-position: left; /* Back to original position */
+    background-position: right; /* Right position */
   }
 }
 
