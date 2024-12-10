@@ -4,8 +4,6 @@
   bottom: 16px;
   right: 16px;
   z-index: 1000;
-  border-radius: 16px;
-
 }
 .flash {
   padding: 16px 24px;
@@ -27,4 +25,19 @@
 
 .flash-danger {
   border: 2px solid #FD1015 !important;
+}
+
+.alert.flash-success {
+  color: white;
+  border-color: #1EDD88;
+}
+
+.alert.flash-danger {
+  color: white;
+  border-color: #FD1015;
+}
+
+.alert.flash-warning {
+  color: white;
+  border-color: #FFC65A;
 }
