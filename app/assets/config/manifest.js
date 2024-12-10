@@ -7,5 +7,4 @@
 //= link application.scss
 //= link application.css
 //= link star-rating.js/dist/star-rating.cjs.js
-//= link rails_admin/rails_admin.css
-//= link rails_admin/rails_admin.js
+

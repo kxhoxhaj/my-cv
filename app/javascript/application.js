@@ -12,3 +12,5 @@ Stimulus.register("swap-view", SwapViewController);
 
 import ToggleActiveClassController from "controllers/toggle_active_class_controller"
 Stimulus.register("toggle-active-class", ToggleActiveClassController);
+
+//= require rails_admin/rails_admin
