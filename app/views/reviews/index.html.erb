@@ -7,24 +7,31 @@
     <h1 class="main-header">Reviews</h1>
     <% if @reviews.any? %>
       <section class="star-display">
-        <% sum = @reviews.sum(&:rating) %>
-        <% average = sum / @reviews.length.to_f %>
-        <% full_stars = average.floor %>
-        <% half_star = (average % 1) >= 0.1 %>
-        <% empty_stars = 5 - full_stars - (half_star ? 1 : 0) %>
+        <section class="ratings-total">
+          <h2>
+            Total: <%= @reviews.length %>
+          </h2>
+        </section>
+        <section class="stars">
+          <% sum = @reviews.sum(&:rating) %>
+          <% average = sum / @reviews.length.to_f %>
+          <% full_stars = average.floor %>
+          <% half_star = (average % 1) >= 0.1 %>
+          <% empty_stars = 5 - full_stars - (half_star ? 1 : 0) %>
 
-        <h2><%= average.round(1) %></h2>
-        <% full_stars.times do %>
-          <%= image_tag 'icons/star.svg', class: "svg-star" %>
-        <% end %>
+          <h2><%= average.round(1) %></h2>
+          <% full_stars.times do %>
+            <%= image_tag 'icons/star.svg', class: "svg-star" %>
+          <% end %>
 
-        <% if half_star %>
-          <%= image_tag 'icons/halfstar.svg', class: "svg-star" %>
-        <% end %>
+          <% if half_star %>
+            <%= image_tag 'icons/halfstar.svg', class: "svg-star" %>
+          <% end %>
 
-        <% empty_stars.times do %>
-          <%= image_tag 'icons/emptystar.svg', class: "svg-star" %>
-        <% end %>
+          <% empty_stars.times do %>
+            <%= image_tag 'icons/emptystar.svg', class: "svg-star" %>
+          <% end %>
+        </section>
       </section>
 
       <div class="review-div d-flex justify-content-center">

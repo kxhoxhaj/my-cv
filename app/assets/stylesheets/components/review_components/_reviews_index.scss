@@ -7,7 +7,7 @@
   min-height: 100vh;
   height: 100%;
   padding-bottom: 2rem;
-  animation: shiftBottomBackground 12s ease-in-out infinite;
+  animation: shiftBottomBackground 12s ease-in-out 1;
 }
 
 @media (max-width: 768px) {
@@ -15,7 +15,7 @@
     background-position: right;
     background-attachment: fixed;
     padding-bottom: 1.5rem;
-    animation: shiftSideBackground 15s ease-in-out infinite;
+    animation: shiftSideBackground 15s ease-in-out 1;
   }
 }
 
