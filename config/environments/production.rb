@@ -32,6 +32,7 @@ Rails.application.configure do
   config.assets.compress = true
   config.assets.compile = true
   config.assets.digest = true
+  config.force_ssl = true 
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   config.asset_host = nil
