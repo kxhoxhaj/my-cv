@@ -1,7 +1,7 @@
 <section class="review-banner">
   <%= render "shared/navbar" %>
   <div id="review-index" class="container">
-    <% if user_signed_in? && !current_user.review %>
+    <% if user_signed_in? && !current_user.review || !user_signed_in? %>
       <%= link_to "👉 Review this website", new_review_path , class: "flash-link", id: "new-review"%>
     <% end %>
     <h1 class="main-header">Reviews</h1>
