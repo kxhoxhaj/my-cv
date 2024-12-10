@@ -6,9 +6,11 @@ RailsAdmin.config do |config|
   end
   config.current_user_method(&:current_user)
 
-  config.authorize_with do
-    redirect_to main_app.root_path unless current_user&.admin?
-  end
+  # Comment or remove the authorize_with block
+  # config.authorize_with do
+  #   redirect_to main_app.root_path unless current_user&.admin?
+  # end
+  config.asset_source = :sprockets
 
   config.actions do
     dashboard                     # mandatory

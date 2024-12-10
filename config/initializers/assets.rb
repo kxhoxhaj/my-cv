@@ -13,7 +13,7 @@ Rails.application.config.assets.version = "1.0"
 Rails.application.config.assets.precompile += %w(bootstrap.min.js popper.js)
 Rails.application.config.assets.paths << Rails.root.join("node_modules/@fortawesome/fontawesome-free/webfonts")
 Rails.application.config.assets.precompile += %w[*.svg *.eot *.woff *.woff2 *.ttf]
-Rails.application.config.assets.precompile += %w[rails_admin.scss rails_admin.js]
+Rails.application.config.assets.precompile += %w[rails_admin/rails_admin.css rails_admin/rails_admin.js]
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.paths << Rails.root.join('vendor', 'assets', 'stylesheets')
 Rails.application.config.assets.paths << Rails.root.join('app', 'assets', 'stylesheets')
