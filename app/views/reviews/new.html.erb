@@ -1,28 +1,30 @@
-<div id="review-new" class="container">
-   <% if current_user.review %>
-    <section class="existing-review">
-      <p> Your review has already been posted 👍🏻 ! Thank you very much 🙏🏻 , it really helps me a lot!</p>
-      <%= link_to "Reviews", reviews_path , class: "submit-button", data: { action:"toggle-active-class#toggleReviews", toggle_active_class_target: "reviews", turbo: "false" }%>
-    </section>
-   <% else  %>
-    <section class="info-message">
-      <p>👋 This review section is for you in order to leave a review and a comment of this website for training purposes. Any advice on what to improve is welcome! Thank you in advance an 🍻 cheers!</p>
-      <p>⭐ <b>Note:</b> Please be kind 😈 !</p>
-    </section>
-    <section class="login-form">
-      <%= simple_form_for @review do |f| %>
-        <div class="form-inputs">
-          <%= f.input :content,
-                      required: true,
-                      input_html: { class: "transparent" } %>
-          <%= f.input :rating, collection: (1..5).to_a, label: "Rate your experience",
-                      required: true,
-                      input_html: { class: "stars", data: {controller: "star-rating"} } %>
-        </div>
-        <div class="form-actions">
-          <%= f.submit "Send your review" , class:"submit-button"%>
-        </div>
-      <% end %>
-    </section>
-   <% end%>
-</div>
+<section class="review-banner">
+  <div id="review-new" class="container">
+    <% if current_user.review %>
+      <section class="existing-review">
+        <p> Your review has already been posted 👍🏻 ! Thank you very much 🙏🏻 , it really helps me a lot!</p>
+        <%= link_to "Reviews", reviews_path , class: "submit-button", data: { action:"toggle-active-class#toggleReviews", toggle_active_class_target: "reviews", turbo: "false" }%>
+      </section>
+    <% else  %>
+      <section class="info-message">
+        <p>👋 This review section is for you in order to leave a review and a comment of this website for training purposes. Any advice on what to improve is welcome! Thank you in advance an 🍻 cheers!</p>
+        <p>⭐ <b>Note:</b> Please be kind 😈 !</p>
+      </section>
+      <section class="login-form">
+        <%= simple_form_for @review do |f| %>
+          <div class="form-inputs">
+            <%= f.input :content,
+                        required: true,
+                        input_html: { class: "transparent" } %>
+            <%= f.input :rating, collection: (1..5).to_a, label: "Rate your experience",
+                        required: true,
+                        input_html: { class: "stars", data: {controller: "star-rating"} } %>
+          </div>
+          <div class="form-actions">
+            <%= f.submit "Send your review" , class:"submit-button"%>
+          </div>
+        <% end %>
+      </section>
+    <% end%>
+  </div>
+</section>
