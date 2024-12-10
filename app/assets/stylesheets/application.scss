@@ -1,6 +1,5 @@
 /*
 *= require_self
-*= require_tree .
 */
 
 // Graphical variables (Define variables first)
@@ -8,11 +7,11 @@
 @import "config/colors";
 @import "config/bootstrap_variables";
 
-// External libraries (If they don't depend on your variables)
-@import "bootstrap";
+// External libraries
+@import "bootstrap"; // Import Bootstrap after variable definitions
 @import "font-awesome";
 
-// Your CSS partials (These should use defined variables)
+// Your CSS partials
 @import "components/index";
 @import "pages/index";
 
