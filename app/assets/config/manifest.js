@@ -4,5 +4,5 @@
 //= link popper.js
 //= link bootstrap.min.js
 //= link application.js
-//= link application.scss
+//= link application.css
 //= link star-rating.js/dist/star-rating.cjs.js

@@ -12,6 +12,11 @@
 @import "font-awesome";
 
 /*
+*= require_self
+*= require_tree .
+*/
+
+/*
  *= require rails_admin/rails_admin
  *= require rails_admin/rails_admin.scss
  */
