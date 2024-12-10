@@ -14,6 +14,14 @@ class ApplicationController < ActionController::Base
     new_review_path
   end
 
+  def after_sign_in_path_for(resource)
+    if resource.sign_in_count == 1
+      new_review_path
+    else
+      super
+    end
+  end
+
   def not_found
     raise ActionController::RoutingError.new("Page not found")
   end
