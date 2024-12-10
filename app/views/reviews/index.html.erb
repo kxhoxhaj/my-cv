@@ -2,7 +2,7 @@
   <%= render "shared/navbar" %>
   <div id="review-index" class="container">
     <% if user_signed_in? && !current_user.review || !user_signed_in? %>
-      <%= link_to "👉 Review this website", new_review_path , class: "flash-link", id: "new-review"%>
+      <%= link_to "👉 Review this website", new_review_path, class: "flash-link", id: "new-review" %>
     <% end %>
     <h1 class="main-header">Reviews</h1>
     <% if @reviews.any? %>
@@ -13,11 +13,11 @@
           </h2>
         </section>
         <section class="stars">
-          <% sum = @reviews.sum(&:rating) %>
-          <% average = sum / @reviews.length.to_f %>
+          <% sum = @reviews.sum { |review| review.rating || 0 } %>
+          <% average = @reviews.any? ? sum / @reviews.length.to_f : 0 %>
           <% full_stars = average.floor %>
           <% half_star = (average % 1) >= 0.1 %>
-          <% empty_stars = 5 - full_stars - (half_star ? 1 : 0) %>
+          <% empty_stars = [5 - full_stars - (half_star ? 1 : 0), 0].max %>
 
           <h2><%= average.round(1) %></h2>
           <% full_stars.times do %>
@@ -36,41 +36,41 @@
 
       <div class="review-div d-flex justify-content-center">
         <ul class="reviews-list">
-          <% @reviews.each do |review|%>
+          <% @reviews.each do |review| %>
             <li class="review-card">
               <section class="review-header">
                 <div class="user-initials">
-                  <p><%= review.user.first_name[0].upcase %><%= review.user.last_name[0].upcase %></p>
+                  <p><%= review.user&.first_name&.first&.upcase %><%= review.user&.last_name&.first&.upcase %></p>
                 </div>
                 <p class="review-content">
-                  <%= review.content %>
+                  <%= review.content.presence || "No review content provided." %>
                 </p>
               </section>
               <p class="rating-star">
                 <% if review.rating < 5 %>
                   <% review.rating.times do %>
-                    <%= image_tag 'icons/star.svg' , class:"svg-star"%>
+                    <%= image_tag 'icons/star.svg', class: "svg-star" %>
                   <% end %>
-                  <% (5-review.rating).times do %>
-                    <%= image_tag 'icons/emptystar.svg' , class:"svg-star"%>
+                  <% (5 - review.rating).times do %>
+                    <%= image_tag 'icons/emptystar.svg', class: "svg-star" %>
                   <% end %>
-                <%else%>
+                <% else %>
                   <% review.rating.times do %>
-                    <%= image_tag 'icons/star.svg' , class:"svg-star"%>
+                    <%= image_tag 'icons/star.svg', class: "svg-star" %>
                   <% end %>
                 <% end %>
               </p>
             </li>
-          <% end%>
+          <% end %>
         </ul>
       <% else %>
-          <p class="font-size">
-            There are no reviews yet...! Be the first to leave one.
-          </p>
-          <% if !user_signed_in?%>
-            <%= link_to "👉 Review this website", new_user_registration_path , class: "flash-link", id: "new-review"%>
-          <% end %>
-      <%end%>
+        <p class="font-size">
+          There are no reviews yet...! Be the first to leave one.
+        </p>
+        <% if !user_signed_in? %>
+          <%= link_to "👉 Review this website", new_user_registration_path, class: "flash-link", id: "new-review" %>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </section>
