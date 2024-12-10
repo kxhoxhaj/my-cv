@@ -6,38 +6,24 @@
   z-index: 1000;
 }
 .flash {
-  padding: 16px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
-  border-radius: 4px;
-  margin: 8px;
+  padding: 16px 24px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 4px !important;
 }
 
 .flash-success {
   border: 2px solid #1EDD88 !important;
-}
-
-.flash-warning {
-  border: 2px solid #FFC65A !important;
+  color: white !important;
 }
 
 .flash-danger {
   border: 2px solid #FD1015 !important;
+  color: white !important;
 }
 
-.alert.flash-success {
-  color: white;
-  border-color: #1EDD88;
-}
-
-.alert.flash-danger {
-  color: white;
-  border-color: #FD1015;
-}
-
-.alert.flash-warning {
-  color: white;
-  border-color: #FFC65A;
+.flash-warning {
+  border: 2px solid #FFC65A !important;
 }
