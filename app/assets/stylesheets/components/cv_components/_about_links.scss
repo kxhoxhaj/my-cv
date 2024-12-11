@@ -1,7 +1,6 @@
 .about-links {
   display: flex;
   flex-direction: row;
-  margin-bottom: 1rem;
 
   .about-button {
     text-decoration: none;
@@ -40,13 +39,17 @@
     flex-direction: column;
     padding: 1rem;
 
+    .about-button{
+      margin-bottom: 1rem;
+    }
+
     .about-button.active {
       margin-left: 2rem;
     }
   }
 
   .about-links.active {
-    display: flex; /* Show the menu */
+    display: flex;
     .about-button:hover {
       margin-top: 0.1rem;
       margin-left: 2rem;
@@ -56,9 +59,8 @@
     }
   }
 
-  /* Ensure content shifts down when menu expands */
   .about-contents {
-    transition: margin-top 0.3s ease-in-out; /* Smooth transition */
+    transition: margin-top 0.3s ease-in-out;
   }
 
   .menu-open{
