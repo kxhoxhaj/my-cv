@@ -1,10 +1,7 @@
 <section class="cv-banner">
   <%= render "shared/navbar" %>
-  <div id="cv-index" class="container" data-controller="menu-collapse swap-view">
-    <button id="menu-icon" class="menu-icon" data-action="menu-collapse#toggleMenu">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-    <div id="menu-links" class="about-links" data-menu-collapse-target="links">
+  <div id="cv-index" class="container" data-controller="swap-view">
+    <div class="about-links">
       <a id="profile-button" class="about-button active" data-action="swap-view#displayProfile" data-swap-view-target="profileLink">Profile</a>
       <a id="experience-button" class="about-button" data-action="swap-view#displayProjects" data-swap-view-target="projectsLink">Projects&Experience</a>
       <a id="education-button" class="about-button" data-action="swap-view#displayEducation" data-swap-view-target="educationLink">Education</a>
