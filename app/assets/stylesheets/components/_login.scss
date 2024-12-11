@@ -65,6 +65,11 @@
     margin-top: 1rem;
     padding: 1rem;
     min-height: 400px;
+    max-height: 613px;
+    .submit-button{
+      width: fit-content;
+      border-radius: 5px;
+    }
   }
   .login-form {
     border-radius: 5px;
@@ -75,6 +80,9 @@
     background-color: $light-color;
     max-height: fit-content;
     margin-bottom: 1rem;
+    .submit-button {
+      border-radius: 5px;
+    }
   }
 
   .login-form:hover, .login-form:active {
@@ -182,4 +190,18 @@ width: fit-content;
     border-radius: 5px;
   }
 
+}
+
+@media (min-width: 769px) {
+  #sign-up{
+    .info-message {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .submit-button{
+        margin-bottom: 0;
+      }
+    }
+  }
 }
