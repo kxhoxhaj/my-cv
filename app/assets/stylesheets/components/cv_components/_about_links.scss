@@ -63,39 +63,12 @@
     transition: margin-top 0.3s ease-in-out;
   }
 
-  .menu-open{
-    .menu-icon{
-      margin-left: 1rem;
-      margin-bottom: 0;
-    }
-  }
-
-
-  .menu-icon {
-    display: block; /* Show menu icon on mobile */
-    background-color: transparent;
-    margin-top: 0.5rem;
-    margin-right: 0.5rem;
-    margin-bottom: 1rem;
-    padding: 0;
-    color: $light-color;
-    border-radius: 16px;
-    border: 1px solid $light-color;
-    padding: 0.5rem;
-    width: 45px;
-    height: 45px;
-  }
-
-
 }
 
-/* Desktop: Hide Menu Icon */
 @media (min-width: 769px) {
-  .menu-icon {
-    display: none; /* Hide menu icon on desktop */
-  }
 
   .about-links {
     display: flex; /* Ensure menu is always visible on desktop */
+    margin: 1rem 0;
   }
 }
